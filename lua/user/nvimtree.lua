@@ -44,8 +44,10 @@ function M.config()
           symlink = icons.ui.FileSymlink,
           bookmark = icons.ui.BookMark,
           folder = {
-            arrow_closed = icons.ui.ChevronRight,
-            arrow_open = icons.ui.ChevronShortDown,
+            --arrow_closed = icons.ui.ChevronRight,
+            --arrow_open = icons.ui.ChevronShortDown,
+            arrow_closed = "",
+            arrow_open = "",
             default = icons.ui.Folder,
             open = icons.ui.FolderOpen,
             empty = icons.ui.EmptyFolder,

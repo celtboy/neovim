@@ -2,6 +2,7 @@ local M = {
   "nvim-lualine/lualine.nvim",
   dependencies = {
     "AndreM222/copilot-lualine",
+    "nvim-tree/nvim-web-devicons",
   },
 }
 
@@ -16,7 +17,7 @@ function M.config()
       lualine_a = { "mode"},
       lualine_b = { "branch" },
       lualine_c = { "diagnostics" },
-      lualine_x = { "location","copilot", "filetype" },
+      lualine_x = { "location","xcopilot", "encoding","filetype" },
       lualine_y = { "progress" },
       lualine_z = {},
     },

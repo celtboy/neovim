@@ -41,7 +41,7 @@ function M.config()
         text_objects = false,
         windows = false,
         nav = false,
-        z = false,
+        z = true,
         g = false,
       },
     },

@@ -1,6 +1,10 @@
 local M = {
   "nvim-telescope/telescope.nvim",
-  dependencies = { { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true } },
+  dependencies = { 
+    "nvim-lua/plenary.nvim",
+    { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = true },
+    "nvim-tree/nvim-web-devicons",
+  },
 }
 
 function M.config()
