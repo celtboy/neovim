@@ -7,6 +7,10 @@ vim.g.maplocalleader = " "
 
 keymap("n", "<C-i>", "<C-i>", opts)
 
+-- Testing updated save for mac 
+keymap("i", "<leader>ss","<Esc>:w<CR>a", {desc = "Save file"})
+
+
 -- Better window navigation
 keymap("n", "<m-h>", "<C-w>h", opts)
 keymap("n", "<m-j>", "<C-w>j", opts)

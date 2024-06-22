@@ -22,6 +22,10 @@ end
 M.on_attach = function(client, bufnr)
   lsp_keymaps(bufnr)
 
+  -- John Added this for inline messages:
+
+  vim.diagnostic.config({ virtual_lines = true }) 
+  vim.diagnostic.config({ virtual_text = true })
   if client.supports_method "textDocument/inlayHint" then
     vim.lsp.inlay_hint.enable(true,{bufnr})
   end
