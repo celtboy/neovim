@@ -15,7 +15,7 @@ spec "user.colors.NightOwl"
 -- END COLORS SCHEMES
 spec "user.telescope"
 spec "user.none-ls"
-
+spec "user.miniicons"
 spec "user.ufo"
 spec "user.devicons"
 spec "user.nerdy"
