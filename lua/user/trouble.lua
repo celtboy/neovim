@@ -13,9 +13,9 @@ function M.config()
  -- local opts = { noremap = true, silent = true }
   
   local wk = require "which-key"
-  wk.register {
-    ["<leader>xx"] = {"<cmd>Trouble diagnostics toggle<cr>","Diagnostics (Trouble)"}
-  }
+  wk.add( {
+    {"<leader>xx","<cmd>Trouble diagnostics toggle<cr>",desc="Diagnostics (Trouble)"}
+  })
   
   require("trouble").setup() 
   

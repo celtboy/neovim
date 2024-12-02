@@ -3,31 +3,12 @@ local M = {
 }
 
 function M.config()
+  local wk = require "which-key"
   local mappings = {
-    q = { "<cmd>confirm q<CR>", "Quit" },
-    h = { "<cmd>nohlsearch<CR>", "NOHL" },
-    [";"] = { "<cmd>tabnew | terminal<CR>", "Term" },
-    v = { "<cmd>vsplit<CR>", "Split" },
-    b = { name = "Buffers" },
-    d = { name = "Debug" },
-    f = { name = "Find" },
-    g = { name = "Git" },
-    l = { name = "LSP" },
-    p = { name = "Plugins" },
-    t = { name = "Test" },
-    a = {
-      name = "Tab",
-      n = { "<cmd>$tabnew<cr>", "New Empty Tab" },
-      N = { "<cmd>tabnew %<cr>", "New Tab" },
-      o = { "<cmd>tabonly<cr>", "Only" },
-      h = { "<cmd>-tabmove<cr>", "Move Left" },
-      l = { "<cmd>+tabmove<cr>", "Move Right" },
-    },
-    T = { name = "Treesitter" },
+   
   }
 
-  local which_key = require "which-key"
-  which_key.setup {
+  wk.setup {
     plugins = {
       marks = true,
       registers = true,
@@ -40,31 +21,32 @@ function M.config()
         motions = false,
         text_objects = false,
         windows = false,
-        nav = false,
+        nav = true,
         z = true,
         g = false,
       },
     },
-    window = {
+    win = {
       border = "rounded",
-      position = "bottom",
-      padding = { 2, 2, 2, 2 },
     },
-    ignore_missing = true,
-    show_help = false,
-    show_keys = false,
-    disable = {
-      buftypes = {},
-      filetypes = { "TelescopePrompt" },
+    layout = {
+      width = { min = 30, max = 50 },
+      height = { min = 10, max = 15 },
+      spacing = 3,
+      align = "center",
     },
+    icons = {
+      breadcrumb = "»",
+      separator = "➜",
+      group = "+",
+    } 
   }
-
   local opts = {
-    mode = "n", -- NORMAL mode
-    prefix = "<leader>",
+    
   }
 
-  which_key.register(mappings, opts)
+  wk.register(mappings, opts)
+  
 end
 
 return M
